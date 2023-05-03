@@ -140,6 +140,7 @@ WindowButtonApplet.prototype = {
 	createButtons: function(buttonsStyle) {
 		buttonsStyle = buttonsStyle.split(":");
 		for (let i = 0; i < buttonsStyle.length; ++i) {
+			if (!buttonsStyle[i]) continue;
 			let buttonName = buttonsStyle[i] + "Button";
 			this[buttonName]();
 		}
